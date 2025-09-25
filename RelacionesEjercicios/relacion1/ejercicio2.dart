@@ -20,6 +20,7 @@ bool feliz = true;
 print("$feliz");
 
 // Records
+// ignore: unused_local_variable
 Record rec = ((1,2),(3,4));
 
 // Functions
@@ -49,5 +50,6 @@ persona = {"Juan":entero,"Marco":3};
 print("$persona");
 
 // Null
+// ignore: unused_local_variable
 Null nulo;
 }
