@@ -9,7 +9,7 @@ void main(){
   n= int.parse(stdin.readLineSync()!);
   }
   int resultado=0;
-  for(int i =0;i<n;i++){
+  for(int i =0;i<=n;i++){
     resultado=resultado+i;
   }
   print("El resultado de los $n primeros numeros naturales es $resultado");

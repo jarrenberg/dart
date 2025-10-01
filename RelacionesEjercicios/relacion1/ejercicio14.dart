@@ -8,5 +8,8 @@ void main(){
       stdout.write("Introduzca el numero de caras:");
       numCaras=int.parse(stdin.readLineSync()!);
     }
-    int valor = Random().nextInt(6);
+    int valor = Random().nextInt(numCaras)+1;
+    print("Resultado: $valor");
+
+
 }

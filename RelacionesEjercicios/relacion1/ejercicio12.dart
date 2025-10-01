@@ -15,7 +15,7 @@ void main(){
      stdout.write("Introduce un numero entero y positivo:");
     n2 = int.parse(stdin.readLineSync()!);
   }
-  MiClase m = MiClase();
+  MiClase m = new MiClase();
   m.mcdEuclides();
 
 

@@ -1,5 +1,20 @@
-/*8- Haz un programa en Dart que muestre la tabla de multiplicar de un número entero (entre
-1 y 10) que se introducirá por consola. Investiga la función stdin.readLineSync() para
-realizar entrada de datos desde consola. ¿Qué ocurre con el sistema “sound type”?.
-Soluciónalo utilizando un tipo nullable. Testea la entrada sometiéndola a distintas pruebas
-de datos de entrada.*/
+/*19- Haz un programa Dart que declare un Map con nombres y edades, y lo recorra
+mostrando todo (clave-valor), que lo recorra mostrando solo las claves, y también, aparte,
+mostrando solo los valores. ¿Qué pasaría si sabemos que alguna de las edades no están
+inicializadas?*/
+void main() {
+  Map<String,int?> personas = Map.new();
+personas.addEntries([MapEntry("Jorge", 23),MapEntry("Raquel", 25),MapEntry("Antonio", 24),MapEntry("Eliana",null)]);
+
+print("Mostrando toda la informacion de los alumnos de la clase ...");
+personas.forEach((nombre,edad)=>print("$nombre, $edad años"));
+
+print("Mostrando los nombres los alumnos de la clase ...");
+personas.forEach((nombre,edad)=>print("$nombre"));
+
+print("Mostrando los edades de los alumnos de la clase ...");
+personas.forEach((nombre,edad)=>print("$edad"));
+
+// En el caso de que algun valor no este inicializado, como es el caso de Eliana mostrara null
+
+}

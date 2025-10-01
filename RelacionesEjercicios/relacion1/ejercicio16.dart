@@ -1,5 +1,31 @@
-/*8- Haz un programa en Dart que muestre la tabla de multiplicar de un número entero (entre
-1 y 10) que se introducirá por consola. Investiga la función stdin.readLineSync() para
-realizar entrada de datos desde consola. ¿Qué ocurre con el sistema “sound type”?.
-Soluciónalo utilizando un tipo nullable. Testea la entrada sometiéndola a distintas pruebas
-de datos de entrada.*/
+/*16- Declara en Dart un lista con los días laborables en Español y muéstrala. Añádele los
+dos días del fin de semana. Recorre la lista día por día y muéstralos por pantalla. Haz lo
+mismo con un Map que contenga una serie de nombres y edades. En estos dos últimos
+casos, usa forEach
+*/
+
+import 'dart:io';
+
+void main(){
+List<String> laborables = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+
+print("Los dias laborables son:");
+laborables.forEach((dia) => stdout.write("$dia "));
+print("");
+
+print("Añadiendo el Sabado y el Domingo ...");
+laborables.add("Sabado");
+laborables.add("Domingo");
+
+print("Mostrando los dias de la semana ...");
+laborables.forEach((dia) => stdout.write("$dia "));
+print("");
+
+
+Map<String,int>personas=Map.new();
+print("Añadiendo alumnos a la clase ...");
+personas.addEntries([MapEntry("Jorge", 23),MapEntry("Antonio", 24),MapEntry("Raquel", 25),MapEntry("Eliana",19)]);
+personas.forEach((nombre, edad) => stdout.write("$nombre, $edad años"));
+
+}
+
