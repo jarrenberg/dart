@@ -10,22 +10,26 @@ void main(){
 List<String> laborables = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
 print("Los dias laborables son:");
-laborables.forEach((dia) => stdout.write("$dia "));
-print("");
 
+for(int i =0; i<laborables.length;i++){
+  stdout.write("${laborables[i]} ");
+}
+print("");
 print("Añadiendo el Sabado y el Domingo ...");
 laborables.add("Sabado");
 laborables.add("Domingo");
 
 print("Mostrando los dias de la semana ...");
-laborables.forEach((dia) => stdout.write("$dia "));
-print("");
+for(int i =0; i<laborables.length;i++){
+  stdout.write("${laborables[i]} ");
+}
+stdout.write("\n\n");
 
 
 Map<String,int>personas=Map.new();
 print("Añadiendo alumnos a la clase ...");
 personas.addEntries([MapEntry("Jorge", 23),MapEntry("Antonio", 24),MapEntry("Raquel", 25),MapEntry("Eliana",19)]);
-personas.forEach((nombre, edad) => stdout.write("$nombre, $edad años"));
+personas.forEach((nombre, edad) => stdout.write("$nombre, $edad años\n"));
 
 }
 

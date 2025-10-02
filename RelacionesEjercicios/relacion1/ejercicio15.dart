@@ -7,11 +7,11 @@ void main(){
     int numCaras = 6;
     int numLanzamientos=0;
     while(numLanzamientos<=100){
-      stdout.write("Introduzca el numero de lanzamientos a realizar:");
+      stdout.write("Introduzca el numero de lanzamientos a realizar de un dado de 6 caras:");
       numLanzamientos=int.parse(stdin.readLineSync()!);
     }
     int veces1=0,veces2=0,veces3=0,veces4=0,veces5=0,veces6=0;
-    int contador=1;
+    int contador=0;
     while(contador<numLanzamientos){
     int valor = Random().nextInt(numCaras)+1;
     switch (valor){
