@@ -7,8 +7,7 @@ void main(){
     int numCaras = 6;
     int numLanzamientos=0;
     while(numLanzamientos<=100){
-      stdout.write("Introduzca el numero de lanzamientos a realizar de un dado de 6 caras:");
-      numLanzamientos=int.parse(stdin.readLineSync()!);
+      numLanzamientos=devolverEnteroValido("Introduzca el numero de lanzamientos (100 minimo) de un dado de 6 caras:");
     }
     int veces1=0,veces2=0,veces3=0,veces4=0,veces5=0,veces6=0;
     int contador=0;
@@ -43,4 +42,18 @@ void main(){
     print("Numero de veces que ha salido 4: $veces4");
     print("Numero de veces que ha salido 5: $veces5");
     print("Numero de veces que ha salido 6: $veces6");
+}
+
+int devolverEnteroValido(String mensaje) {
+  bool numValido = false;
+  int n = 0;
+  while (!numValido) {
+    stdout.write("${mensaje}\n");
+    try {
+      n = int.parse(stdin.readLineSync()!);
+      return n;
+    } catch (ex) {
+      print(ex.toString());
+    }
+  }
 }

@@ -3,7 +3,7 @@ mostrando todo (clave-valor), que lo recorra mostrando solo las claves, y tambi�
 mostrando solo los valores. ¿Qué pasaría si sabemos que alguna de las edades no están
 inicializadas?*/
 void main() {
-  Map<String,int?> personas = Map.new();
+  Map<String,int?> personas = new Map();
 personas.addEntries([MapEntry("Jorge", 23),MapEntry("Raquel", 25),MapEntry("Antonio", 24),MapEntry("Eliana",null)]);
 
 print("Mostrando toda la informacion de los alumnos de la clase ...");

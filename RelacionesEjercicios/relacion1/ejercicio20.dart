@@ -37,7 +37,6 @@ MapEntry<diasSemana, double> encontrarMaxima(Map<diasSemana, double> mapa) {
   
   MapEntry<diasSemana, double> resultado = mapa.entries.first;
   double tempMaxima = double.negativeInfinity;
-  
   mapa.forEach((dia, temp) {
     if (temp > tempMaxima) {
       tempMaxima = temp;

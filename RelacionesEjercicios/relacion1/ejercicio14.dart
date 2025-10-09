@@ -5,11 +5,22 @@ import 'dart:math';
 void main(){
     int numCaras = 0;
     while(numCaras<5){
-      stdout.write("Introduzca el numero de caras:");
-      numCaras=int.parse(stdin.readLineSync()!);
+      numCaras=devolverEnteroValido("Introduzca un numero de caras mayor a 5: ");
     }
     int valor = Random().nextInt(numCaras)+1;
     print("Resultado: $valor");
+}
 
-
+int devolverEnteroValido(String mensaje) {
+  bool numValido = false;
+  int n = 0;
+  while (!numValido) {
+    stdout.write("${mensaje}\n");
+    try {
+      n = int.parse(stdin.readLineSync()!);
+      return n;
+    } catch (ex) {
+      print(ex.toString());
+    }
+  }
 }
